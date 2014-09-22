@@ -1,0 +1,267 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>WeRise Chits||Chit mangement</title>
+
+<link href="css/mainstyle.css" rel="stylesheet" type="text/css" />
+ <link rel="stylesheet" href="css/sliderstyle.css" type="text/css" media="screen"/>
+
+
+</head>
+
+<body>
+<!-- .........................................TOP LINE STARTS...................................... -->
+
+<div class="wrapper col0">
+  <div id="topline">
+    <p>Tel: 080 42195341 | Mail: info@chitsoft.com</p>
+    <ul>
+      <li><a href="#">Privacy Terms</a></li>
+      <li><a href="#">Help</a></li>
+      <li><a href="ad_secure_login.jsp">Admin Area</a></li>
+     
+    </ul>
+    <br class="clear" />
+  </div>
+  </div>
+<!-- .........................................TOP LINE ENDS...................................... -->
+<!-- ........................HEADER IMAGE AND MENU BAR STARTS..................................... -->
+
+<div id="header"><a href="main-index.html"><img src="css/images/logo.jpg"  border="0"/></a>
+	<ul>
+		<li><a href="main-index.html" title="Home"><img src="css/images/home.jpg" style="width:60px; height:60px;"/></a></li>
+		<li><a href="about.jsp" title="About Us"><img src="css/images/about.png" style="width:60px; height:60px;"/></a></li>
+		
+		<li><a href="#" title="Join Us"><img src="css/images/join.jpg" style="width:60px; height:60px;"/></a></li>
+		<li><a href="features.jsp" title="Features"><img src="css/images/features.jpg" style="width:60px; height:60px;"/></a></li>
+		<li><a href="enquiry.jsp" title="Enquiry"><img src="css/images/enquire.png" style="width:60px; height:60px;"/></a></li>
+	</ul>
+</div>
+<!-- ........................HEADER IMAGE AND MENU BAR ENDS..................................... -->
+<!-- .........................................SLIDER STARTS..................................... -->
+<div id="headerPan">
+  <div id="content">
+        <div class="rotator">
+                <ul id="rotmenu">
+                   <li>
+                       <a href="rot1">About Us</a>
+                        	<div style="display:none;">
+                           		 <div class="info_image">1.jpg</div>
+                            	<div class="info_description">
+				Werise Chit Soft is a complete solution for chit fund managing agents. Werise Chit Soft software is designed specifically to meet the unique needs of chit fund and kuries companies by providing an integrated accounting package, subscribers management,auction and prize management...
+                                <a href="about.jsp" class="more">Read more</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="rot2">Why Werise Chits?</a>
+                        <div style="display:none;">
+                            <div class="info_image">2.png</div>
+                           
+                            <div class="info_description">
+				not yet added
+                                <a href="features.jsp" class="more">Read more</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="rot3">View Schemes</a>
+                        <div style="display:none;">
+                            <div class="info_image">3.png</div>
+                            
+                            <div class="info_description">
+				Choose your right plan which exactly match your requirements...
+                                <a href="chit_scheme.jsp" class="more">Read more</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="rot4">What is Chit Fund?</a>
+                        <div style="display:none;">
+                            <div class="info_image">4.jpg</div>
+                           
+                            <div class="info_description">
+				A chit fund is a savings or borrowing scheme, in which a group of people enter into an agreement to contribute fixed amounts periodically, for a specified period of time...
+                                <a href="whatchit.jsp" class="more">Read more</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="rot5">Request Demo</a>
+                        <div style="display:none;">
+                            <div class="info_image">5.png</div>
+                            <div class="info_heading">Working things</div>
+                            <div class="info_description">
+                               Are you inrested?????Feel Free to talk with us:<br>
+                               <br><font size="20px"color="white";>080 42195341</font>
+                               
+                               
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div id="rot1">
+                    <img src="" width="800" height="300" class="bg" alt=""/>
+                    <div class="heading">
+                        <h1></h1>
+                    </div>
+                    <div class="description">
+                        <p></p>
+
+                    </div>    
+                </div>
+            </div>
+        </div>
+       
+        <!-- The JavaScript -->
+        <script type="text/javascript" src="slider/min.js"></script>
+        <script type="text/javascript" src="slider/jquery.easing.1.3.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                var current = 1;
+                
+                var iterate		= function(){
+                    var i = parseInt(current+1);
+                    var lis = $('#rotmenu').children('li').size();
+                    if(i>lis) i = 1;
+                    display($('#rotmenu li:nth-child('+i+')'));
+                }
+                display($('#rotmenu li:first'));
+                var slidetime = setInterval(iterate,3000);
+				
+                $('#rotmenu li').bind('click',function(e){
+                    clearTimeout(slidetime);
+                    display($(this));
+                    e.preventDefault();
+                });
+				
+                function display(elem){
+                    var $this 	= elem;
+                    var repeat 	= false;
+                    if(current == parseInt($this.index() + 1))
+                        repeat = true;
+					
+                    if(!repeat)
+                        $this.parent().find('li:nth-child('+current+') a').stop(true,true).animate({'marginRight':'-20px'},300,function(){
+                            $(this).animate({'opacity':'0.7'},700);
+                        });
+					
+                    current = parseInt($this.index() + 1);
+					
+                    var elem = $('a',$this);
+                    
+                        elem.stop(true,true).animate({'marginRight':'0px','opacity':'1.0'},300);
+					
+                    var info_elem = elem.next();
+                    $('#rot1 .heading').animate({'left':'-420px'}, 500,'easeOutCirc',function(){
+                        $('h1',$(this)).html(info_elem.find('.info_heading').html());
+                        $(this).animate({'left':'0px'},400,'easeInOutQuad');
+                    });
+					
+                    $('#rot1 .description').animate({'bottom':'-270px'},500,'easeOutCirc',function(){
+                        $('p',$(this)).html(info_elem.find('.info_description').html());
+                        $(this).animate({'bottom':'0px'},400,'easeInOutQuad');
+                    })
+                    $('#rot1').prepend(
+                    $('<img/>',{
+                        style	:	'opacity:0',
+                        className : 'bg'
+                    }).load(
+                    function(){
+                        $(this).animate({'opacity':'1'},600);
+                        $('#rot1 img:first').next().animate({'opacity':'0'},700,function(){
+                            $(this).remove();
+                        });
+                    }
+                ).attr('src','images/'+info_elem.find('.info_image').html()).attr('width','850').attr('height','300')
+                );
+                }
+            });
+        </script>
+</div>
+<!-- .........................................SLIDER ENDS..................................... -->
+<!-- .........................................CNTENT STARTS..................................... -->
+  <div id="rightPan">
+  		<div id="rightbodyPan">
+			<p><img src="images/title.png"/></p>
+	
+			<p><b><font size="6px" color="green">W</font></b>erise Chits is a Public Limited Company operating in Bangalore,
+			 Karnataka. Chit Schemes from Werise  are instruments in saving money and reaping high-returns.
+			  It is a complete solution for chit fund managing agents. Werise Chits  software is designed specifically to 
+			  meet the unique needs of chit fund and kuries companies by providing an integrated accounting package, 
+			  subscribers management,auction and prize management. </p>
+
+	 
+  		</div>
+  
+</div>
+		
+<!-- .........................................CONTENT ENDS..................................... -->
+		
+<!-- .........................................LOGIN FORM STARTS..................................... -->
+
+
+<div id="login-form">
+
+        <h3>Login</h3>
+
+        <fieldset>
+
+            <form action="userlogin" method="post">
+
+                <input type="text" name="txtUserName" required value="User Id" onBlur="if(this.value=='')this.value='Email'" onFocus="if(this.value=='Email')this.value='' "> <!-- JS because of IE support; better: placeholder="Email" -->
+<br>
+                <input type="password" name="txtUserPassword" required value="Password" onBlur="if(this.value=='')this.value='Password'" onFocus="if(this.value=='Password')this.value='' "> <!-- JS because of IE support; better: placeholder="Password" -->
+
+                <input type="submit" value="Login">
+
+                <footer class="clearfix">
+
+                    <p><span class="info">?</span><a href="forgot-password.jsp">Forgot Password</a></p>
+                    <p><span class="info">?</span><a href="forgot-userid.jsp">Forgot User Name</a></p>
+
+                </footer>
+
+            </form>
+
+        </fieldset>
+
+    </div> 
+    <!-- .........................................LOGIN FORM ENDS..................................... -->
+    <!-- .........................................FOOTER STARTS..................................... -->
+
+<div id="cfooter" 
+	style="color: #FFFFFF;
+	background:rgba(219, 129, 12, 1);
+	padding: 6px 0 5px 0;
+	
+	margin-top:196px;
+	font-weight: bold;
+	width:1348px;
+height:44px;
+
+margin-bottom:-10px;
+font-size:10px;">
+		<center><font color="black" size="1px">Copyright @ 2014 Werise Foundation. www.WeriseFoundation.org. All Rights Reserved.</font><br>
+		<a href="main-index.html"><font color="black" size="2px">Home</font></a>|
+		<a href="about.jsp"><font color="black" size="2px">About Us</font></a>|
+		<a href="join.jsp"><font color="black" size="2px">Join Us</font></a>|
+		<a href="features.jsp"><font color="black" size="2px">Features</font></a>|
+		<a href="enquiry.jsp"><font color="black" size="2px">Contact Us</font></a>|
+		<a href="chit_scheme.jsp"><font color="black" size="2px">View Schemes</font></a>|
+		<a href="forgot-password.jsp"><font color="black" size="2px">Forgot password?</font></a>|
+		<a href="forgot-userid.jsp"><font color="black" size="2px">Forgot User Id?</font></a>|
+		<a href="whatchit.jsp"><font color="black" size="2px">What is Chit Fund?</font></a>|
+		</center>
+	</div>
+<!-- .........................................FOOTER ENDS..................................... -->
+</body>
+</html>
+   
+   
+   
+   
+   
+   
+   

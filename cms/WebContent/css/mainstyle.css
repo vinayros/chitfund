@@ -1,0 +1,283 @@
+/* CSS Document */
+body
+{
+	padding:0;
+	margin:0; 
+	font:14px/20px Arial, Helvetica, sans-serif; 
+	color:#3D3C2C; 
+	font-weight:normal;
+	
+	
+}
+div, p, h1, h2, h3, ul, img{
+	padding:0px;
+	margin:0px;
+}
+ul{list-style-type:none;}
+/* ---------------------------------------------TOPLINE STARTS-------------------------------------*/
+
+#topline{
+	padding: 17px 0px;
+width: 1348px;
+
+
+background-color:rgba(222, 134, 19, 1);
+	}
+
+#topline p{
+	float:left;
+	margin:0;
+	padding:0;
+	}
+
+#topline ul{
+	float:right;
+	margin:0;
+	padding:0;
+	list-style:none;
+	}
+
+#topline li{
+	display:inline;
+	margin:0 8px 0 0;
+	padding:0 10px 0 0;
+	border-right:1px solid #999999;
+	}
+
+#topline li.last{
+	margin-right:0;
+	padding-right:0;
+	border:none;
+	}
+
+/* ---------------------------------------------TOPLINE ENDS-------------------------------------*/
+
+/* --------------------------------------------HEADER IMAGE AND MENU BAR------------------------------------*/
+
+#header{
+width:900px;
+height:96px;
+position:relative;
+margin:0 auto;
+padding:0;
+}
+#header img{width:300px; height:66px; display:block; padding:23px 0 0 6px;}
+/* Menu Panel */
+#header ul{width:520px; height:96px; display:block; position:absolute; top:0px; right:9px; margin:0; padding:0;}
+#header ul li{float:left; width:104px; display:block; text-align:center;}
+#header ul li a{width:104px; height:35px; display:block; font:14px/14px "Trebuchet MS",Arial, Helvetica, sans-serif; color:#2E4E00; text-decoration:none; margin:0; padding:0px 0 0 0; }
+#header ul li a:hover{ width:104px; height:96px; display:block; background:#FCFAE6; color:#2E4E00; text-decoration:none;}
+#header ul li span{width:104px; height:35px; display:block; background:url(images/menu-devider1.gif) 100% 0 no-repeat #FCFAE6; color:#2E4E00; text-decoration:none; padding:61px 0 0 0; line-height:14px;}
+
+/* /TOP PANEL */
+
+/* HEADER PANEL */
+#headerPan{width:778px; height:307px; position:relative; margin:0 auto; padding:0;}
+#headerPan h1{width:700px; height:388px; position:absolute;left:265px; top:49px; right:0px; background:url(images/header-img.jpg) 0 0 no-repeat; font-size:36px; line-height:18px; text-transform:uppercase; text-indent:-2000px;}
+#headerPanleft{ width:237px; height:214px; position:absolute; top:48px; left:-55px;}
+#headerPan #enquiry{ float:left; width:237px; height:62px; position:relative; margin:0 auto; background:url(images/what.png) 0 0 no-repeat;}
+
+#headerPan #enquiry a{text-decoration:none; display:block; width:237px; height:62px;}
+
+
+#headerPan #features{ float:left; width:237px; height:62px; position:relative; margin:13px 0 0 0; background:url(images/menu.png) 0 0 no-repeat;}
+
+#headerPan #features a{text-decoration:none; display:block; width:237px; height:62px;}
+
+
+#headerPan #demo{ float:left; width:237px; height:62px; position:relative; margin:13px 0 0 0; background:url(images/demo_icon.jpg) 0 0 no-repeat;}
+
+#headerPan #demo a{text-decoration:none; display:block; width:237px; height:62px;}
+/* ---------------------------------------------HEADERIMAGE AND MENU BAR ENDS-------------------------------------*/
+
+/* ..............................SLIDER DESIGN...............................................starts*/
+ #content{
+                margin:150px auto 10px auto;
+            }
+            .reference{
+                clear:both;
+                width:800px;
+                margin:30px auto;
+            }
+            .reference p a{
+                text-transform:uppercase;
+                text-shadow:1px 1px 1px #fff;
+                color:#666;
+                text-decoration:none;
+                font-size:10px;
+            }
+            .reference p a:hover{
+                color:#333;
+            }
+/* ................................SLIDER DESIGN.............................................ends*/
+/* ---------------------------------------------LOIN FORM STARTS------------------------------------*/
+#login-form {
+	margin-top:79px;
+	margin-left:231px;
+	width: 300px;
+	height:200px;
+}
+
+#login-form h3 {
+	background-color: rgba(3, 23, 19, 1);
+border-radius: 5px 5px 5px 5px;
+color: #FFF;
+font-size: 14px;
+padding: 12px;
+text-align: center;
+text-transform: uppercase;
+}
+
+#login-form fieldset {
+	background: #fff;
+	border-radius: 5px 6px 5px 5px;
+	padding: 20px;
+	height: 213px;
+	
+	
+}
+
+
+
+#login-form input {
+	font-size: 14px;
+}
+
+#login-form input[type="text"],
+#login-form input[type="password"] {
+	border: 1px solid #dcdcdc;
+	padding: 12px 10px;
+	width: 238px;
+}
+
+#login-form input[type="email"] {
+	border-radius: 3px 3px 0 0;
+}
+
+#login-form input[type="password"] {
+	border-top: none;
+	border-radius: 0px 0px 3px 3px;
+}
+
+#login-form input[type="submit"] {
+	background: #1dabb8;
+	border-radius: 3px;
+	color: #fff;
+	float: right;
+	font-weight: bold;
+	margin-top: 20px;
+	padding: 12px 20px;
+}
+
+#login-form input[type="submit"]:hover { background: #198d98; }
+
+#login-form footer {
+	font-size: 12px;
+	margin-top: 16px;
+}
+
+.info {
+	background: #e5e5e5;
+	border-radius: 50%;
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	margin: 0 10px 0 0;
+	text-align: center;
+	width: 20px;
+}
+
+/* ---------------------------------------------LOGIN FORM ENDS------------------------------------*/
+
+/* .........................................CONTACT FORM....................................starts*/
+#contact-form {  
+   background-color: rgba(3, 23, 19, 1);
+width: 264px;
+padding: 20px;
+margin: 20px;
+border-radius: 15px;
+margin-left: 229px;
+} 
+  
+#contact-form input,   
+#contact-form select,   
+#contact-form textarea,   
+#contact-form label {  
+   font-size: 15px;  
+   margin-bottom: 2px;
+   font-family: Arial, san-serif;
+   font-color:white;
+}  
+  
+#contact-form input,   
+#contact-form select,   
+#contact-form textarea {  
+   width: 247px;
+   background: #fff;
+   border: 0; 
+   -moz-border-radius: 5px;  
+   -webkit-border-radius: 5px;  
+   border-radius: 5px;
+   margin-bottom: 25px;  
+   padding: 5px;  
+}  
+  
+#contact-form input:focus,   
+#contact-form select:focus,   
+#contact-form textarea:focus {  
+   background-color: #E5E6E7; 
+}  
+  
+#contact-form textarea {  
+   height: 150px;   
+}  
+
+#contact-form #submit {  
+   width: 257px;
+color: rgba(242, 25, 17, 1);
+border: medium none;
+background-color: rgba(229, 242, 230, 1);
+}  
+  
+#contact-form #submit:hover {  
+   background-color: #BFD7C1;  
+   color: #6EA070; 
+}
+
+/* ..................................CONTACT FORM...........................................ends*/
+
+
+/* ---------------------------------------------CONTENT PANEL------------------------------------*/
+#bodyPan{width:778px; height:500px; position:relative; margin:0 auto; padding:0;}
+
+
+#rightPan{width: 547px;
+height: 300px;
+left: 543px; position:absolute; top:579px; right:10px; border:1px solid #DCDAC2; background:#fff;color:#3D3C2C;}
+#rightbodyPan{width:600px; height:300px; position:absolute; top:10px; left:10px;}
+#rightbodyPan h2{width:266px; height:31px; display:block; position: relative; background:url(images/symbol5.gif) 100% 0 no-repeat #FCFAE6; padding:24px 0 0 0; font:28px/28px Georgia, "Times New Roman", Times, serif; color:#3D3C2C; margin:20px 0 20px 80px ;}
+#rightbodyPan p{padding:0 80px 30px;}
+
+
+/* ---------------------------------------------CONTENT PANEL ENDS------------------------------------*/
+
+/* ---------------------------------------------FOOTER PANEL STARTS-----------------------------------*/
+
+#footer {
+	color: #FFFFFF;
+	background: rgba(219, 129, 12, 1); 
+	padding: 6px 0 5px 0;
+	
+	margin-top:400px;;
+	font-weight: bold;
+	width:1261px;
+height:40px;
+margin-left:-510px;
+}
+#footer p {
+	margin-top: 12px;
+	
+	padding: 0;
+	height:60px;
+}
+/* ---------------------------------------------FOOTER PANEL ENDS------------------------------------*/
